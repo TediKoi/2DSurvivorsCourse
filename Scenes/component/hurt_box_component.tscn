@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpyptd3as8w8j"]
+
+[ext_resource type="Script" path="res://Scenes/component/hurt_box_component.gd" id="1_q72tc"]
+[ext_resource type="Script" path="res://Scenes/component/health_component.gd" id="2_01nry"]
+
+[node name="HurtBoxComponent" type="Area2D" node_paths=PackedStringArray("health_component")]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_q72tc")
+health_component = NodePath("HealthComponent")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("2_01nry")
